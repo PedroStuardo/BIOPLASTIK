@@ -1,90 +1,105 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
 body {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  background-color: #f6fff7;
-  color: #2e3d2f;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f8f3;
+    color: #243c2b;
+    transition: background-color 0.3s ease;
 }
-.header {
-  background-color: #214e34;
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-  position: relative;
+
+header {
+    background-color: #244f3c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+
+nav {
+    background-color: #244f3c;
+    color: white;
+    padding: 10px 20px;
 }
-.slogan {
-  font-size: 1rem;
-  color: #d9ead3;
+
+nav h1 {
+    margin: 0;
+    font-size: 2em;
 }
-.menu-button {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
+
+.menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
-#sideMenu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #214e34;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  z-index: 1;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #2e5c47;
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
 }
-#sideMenu a {
-  padding: 10px 20px;
-  display: block;
-  color: #f1f1f1;
-  font-size: 18px;
-  text-decoration: none;
+
+.sidebar.open {
+    left: 0;
 }
-#sideMenu .closebtn {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-size: 36px;
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
 }
-.main-container {
-  padding: 2rem;
-  text-align: center;
+
+.content {
+    padding: 20px;
 }
-.page-container {
-  padding: 2rem;
-  max-width: 700px;
-  margin: auto;
+
+footer {
+    background-color: #244f3c;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
-h1, h2 {
-  color: #2e3d2f;
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
 }
-ul {
-  padding-left: 1.5rem;
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #214e34;
-  color: white;
-  margin-top: 2rem;
+
+img.icono {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
-.galeria {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2rem;
+
+.section-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
-.galeria img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
+
+.section-grid div {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
 }

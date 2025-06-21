@@ -6,65 +6,42 @@
   <title>BioPlastik</title>
   <link rel="stylesheet" href="estilos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <span class="menu-button" onclick="toggleMenu()">☰</span>
+    <a href="index.html" class="logo">BioPlastik</a>
+    <p class="slogan">Bienvenido a nuestra asesoría agrícola sustentable</p>
+  </header>
+
+  <div id="sideMenu">
+    <a href="javascript:void(0)" onclick="toggleMenu()" class="closebtn">×</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="trabajamos.html">Con Quiénes Trabajamos</a>
+    <a href="precios.html">Precios</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+
+  <main class="main-container scrollable">
+    <section class="bienvenida">
+      <h1>Asesoría sustentable para un futuro verde</h1>
+      <p>Te acompañamos en el camino hacia el Sello Verde SCX CO₂</p>
+    </section>
+    <section class="galeria">
+      <img src="https://images.unsplash.com/photo-1605733160314-4d1ef0a9b2da" alt="Campos" />
+      <img src="https://images.unsplash.com/photo-1581093588401-80a3c7bba9c9" alt="Exportación" />
+      <img src="https://images.unsplash.com/photo-1589927986089-35812388d1d3" alt="Sustentabilidad" />
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BioPlastik</p>
+  </footer>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('sideMenu');
       menu.style.width = menu.style.width === '250px' ? '0' : '250px';
     }
-    function scrollToSection(id) {
-      document.getElementById('sideMenu').style.width = '0';
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
   </script>
-</head>
-<body>
-  <div id="sideMenu">
-    <a href="javascript:void(0)" onclick="toggleMenu()" class="closebtn">×</a>
-    <a href="#" onclick="scrollToSection('quienes')">Quiénes Somos</a>
-    <a href="#" onclick="scrollToSection('trabajamos')">Con Quiénes Trabajamos</a>
-    <a href="#" onclick="scrollToSection('precios')">Precios</a>
-    <a href="#" onclick="scrollToSection('contacto')">Contacto</a>
-  </div>
-
-  <header class="header" id="top">
-    <span class="menu-button" onclick="toggleMenu()">☰</span>
-    <a href="#top" class="logo">BioPlastik</a>
-    <p class="slogan">Asesorías para un Futuro Agrícola Sustentable</p>
-  </header>
-
-  <main class="main-container">
-    <section id="quienes" class="box">
-      <h2>Quiénes Somos</h2>
-      <p>BioPlastik es una empresa que entrega asesoría a predios agrícolas para ayudarlos a cumplir con los requisitos del Sello Verde SCX CO₂. Nuestro enfoque combina conocimiento técnico, visión ambiental y orientación al negocio exportador.</p>
-    </section>
-
-    <section id="trabajamos" class="box">
-      <h2>Con Quiénes Trabajamos</h2>
-      <ul>
-        <li><strong>Productores agrícolas:</strong> de todos los tamaños</li>
-        <li><strong>Cooperativas:</strong> organizadas para la certificación</li>
-        <li><strong>Empresas exportadoras:</strong> que buscan trazabilidad verde</li>
-      </ul>
-    </section>
-
-    <section id="precios" class="box">
-      <h2>Precios de Asesorías</h2>
-      <ul>
-        <li><strong>Plan Inicial:</strong> UF 25 – Diagnóstico y plan de acción</li>
-        <li><strong>Plan Avanzado:</strong> UF 50 – Acompañamiento y formación</li>
-        <li><strong>Plan Certificación:</strong> UF 80 – Hasta obtención del sello</li>
-      </ul>
-    </section>
-
-    <section id="contacto" class="box">
-      <h2>Contacto</h2>
-      <p><strong>Email:</strong> info@bioplastik.cl</p>
-      <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 BioPlastik. Todos los derechos reservados.</p>
-  </footer>
 </body>
 </html>

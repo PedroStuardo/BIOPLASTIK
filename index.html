@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioPlastik</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.style.width = menu.style.width === '250px' ? '0' : '250px';
+    }
+    function scrollToSection(id) {
+      document.getElementById('sideMenu').style.width = '0';
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <div id="sideMenu">
+    <a href="javascript:void(0)" onclick="toggleMenu()" class="closebtn">×</a>
+    <a href="#" onclick="scrollToSection('quienes')">Quiénes Somos</a>
+    <a href="#" onclick="scrollToSection('trabajamos')">Con Quiénes Trabajamos</a>
+    <a href="#" onclick="scrollToSection('precios')">Precios</a>
+    <a href="#" onclick="scrollToSection('contacto')">Contacto</a>
+  </div>
+
+  <header class="header" id="top">
+    <span class="menu-button" onclick="toggleMenu()">☰</span>
+    <a href="#top" class="logo">BioPlastik</a>
+    <p class="slogan">Asesorías para un Futuro Agrícola Sustentable</p>
+  </header>
+
+  <main class="main-container">
+    <section id="quienes" class="box">
+      <h2>Quiénes Somos</h2>
+      <p>BioPlastik es una empresa que entrega asesoría a predios agrícolas para ayudarlos a cumplir con los requisitos del Sello Verde SCX CO₂. Nuestro enfoque combina conocimiento técnico, visión ambiental y orientación al negocio exportador.</p>
+    </section>
+
+    <section id="trabajamos" class="box">
+      <h2>Con Quiénes Trabajamos</h2>
+      <ul>
+        <li><strong>Productores agrícolas:</strong> de todos los tamaños</li>
+        <li><strong>Cooperativas:</strong> organizadas para la certificación</li>
+        <li><strong>Empresas exportadoras:</strong> que buscan trazabilidad verde</li>
+      </ul>
+    </section>
+
+    <section id="precios" class="box">
+      <h2>Precios de Asesorías</h2>
+      <ul>
+        <li><strong>Plan Inicial:</strong> UF 25 – Diagnóstico y plan de acción</li>
+        <li><strong>Plan Avanzado:</strong> UF 50 – Acompañamiento y formación</li>
+        <li><strong>Plan Certificación:</strong> UF 80 – Hasta obtención del sello</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="box">
+      <h2>Contacto</h2>
+      <p><strong>Email:</strong> info@bioplastik.cl</p>
+      <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BioPlastik. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
